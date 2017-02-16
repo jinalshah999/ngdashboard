@@ -4,17 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-
+import { TasksComponent } from './tasks/tasks.component';
+import { TaskdataService } from './taskdata.service';
+import { routing } from './app.routing';
+import { AddtaskComponent } from './tasks/addtask.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TasksComponent,
+    AddtaskComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
-  providers: [],
+  providers: [TaskdataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
